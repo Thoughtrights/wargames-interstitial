@@ -5,7 +5,16 @@
 import wargames
 
 print(f"""Content-Type: text/html\n\n
-<link rel="stylesheet" href="WOPR.css">""")
+<head>
+  <title>Wargames WOPR List Games</title>
+  <meta property="og:title" content="Wargames WOPR List Games">
+  <meta name="twitter:title" content="Wargames WOPR List Games">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://www.thoughtrights.com/WOPR/WOPR-preview.png">
+  <meta name="twitter:image" content="https://www.thoughtrights.com/WOPR/WOPR-preview.png">
+  <link rel="stylesheet" href="WOPR.css">
+</head>
+<body>""")
 
 # LIST GAMES
 print("""<div class="woprScroll"><span class="woprStyle woprAnimate">""")
@@ -32,7 +41,7 @@ print("</span></div>\n")
 print("""<div class="woprScroll joshua2"><span class="woprStyle">""")
 for line in wargames.woprConcludes2:
     print (f"{line}<br />")
-print("</span></div>\n")
+print("</span></div></body></html>\n")
 
 
 
